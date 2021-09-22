@@ -23,10 +23,10 @@ export default class NewBlogPost extends Component {
 
   sendPost = async (e) => {
     const apiUrl = process.env.REACT_APP_BE_URL
-    // const url = `http://localhost:3001/blogPosts/`;
+    const url = `${apiUrl}/blogPosts`;
     e.preventDefault();
     try {
-      let response = await fetch(`${apiUrl}/blogPost/`, {
+      let response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(this.state),
         headers: {
