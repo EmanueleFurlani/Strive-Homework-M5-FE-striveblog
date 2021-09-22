@@ -13,7 +13,7 @@ export default class BlogList extends Component {
     const apiUrl = process.env.REACT_APP_BE_URL
     // const url = "http://localhost:3001/blogPosts/";
     try {
-      let response = await fetch(`${apiUrl}/blogPost`);
+      let response = await fetch(`${apiUrl}/blogPosts`);
       let data = await response.json();
       if (response.ok) {
         this.setState({ blog: data });

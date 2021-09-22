@@ -16,7 +16,7 @@ class Blog extends Component {
     const apiUrl = process.env.REACT_APP_BE_URL
     // const url = "http://localhost:3001/blogPosts/" + this.props.match.params.id;
     try {
-      let response = await fetch(`${apiUrl}/blogPost/` + this.props.match.params.id);
+      let response = await fetch(`${apiUrl}/blogPosts/` + this.props.match.params.id);
       let data = await response.json();
       if (response.ok) {
         console.log(data);
